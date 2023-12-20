@@ -1,18 +1,23 @@
-div {
+.navigation {
   background-color: white;
   height: 70px;
+  position: fixed;
+  width: 100%;
+  top: 0%;
   display: flex;
   align-items: center;
 }
 
 .redberry-logo {
   width: 120px;
-  margin-left: 50px;
+  margin-left: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .login-btn {
   position: absolute;
-  right: 50px;
+  right: 60px;
   font-family: "firaGo";
   font-size: 12px;
   padding: 10px 15px;
