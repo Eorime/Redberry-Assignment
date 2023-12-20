@@ -1,0 +1,14 @@
+.categoryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoryButtons button {
+  margin: 5px;
+}
