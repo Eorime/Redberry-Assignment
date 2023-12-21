@@ -8,7 +8,6 @@ const Categories = () => {
     fetch("https://api.blog.redberryinternship.ge/api/categories")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
         setCategories(data.data);
       });
   }, []);

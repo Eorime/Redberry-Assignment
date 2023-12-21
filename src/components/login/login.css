@@ -1,0 +1,82 @@
+.login-modal {
+  background-color: white;
+  font-family: "firaGo";
+  border-radius: 12px;
+  position: fixed;
+  height: 272px;
+  width: 480px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.e-mail {
+  padding-right: 350px;
+  font-size: 14px;
+  color: #1a1a1f;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: -4px;
+}
+
+.enter {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1f;
+  margin-top: 5px;
+}
+
+.input {
+  border-radius: 12px;
+  width: 420px;
+  height: 44px;
+  border: 2px solid #5d37f3;
+  font-size: 14px;
+  text-indent: 10px;
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
+
+.closeWindow {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #1a1a1f;
+  margin-left: 400px;
+}
+
+.closeWindow:hover {
+  cursor: pointer;
+}
+
+.input:active {
+  border-color: #5d37f3;
+}
+
+.input:focus {
+  outline: none;
+  background-color: #f7f7ff;
+}
+
+.window-login-bttn {
+  width: 430px;
+  height: 44px;
+  border-radius: 12px;
+  font-family: "firaGo";
+  border: 2px solid #5d37f3;
+  background-color: #5d37f3;
+  color: white;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.window-login-bttn:hover {
+  cursor: pointer;
+  border: 2px solid #4922e5;
+  background-color: #4922e5;
+}
