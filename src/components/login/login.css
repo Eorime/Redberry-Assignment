@@ -12,6 +12,17 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000085;
+  z-index: 1;
 }
 
 .e-mail {
@@ -27,7 +38,7 @@
   font-size: 24px;
   font-weight: bold;
   color: #1a1a1f;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .input {
@@ -46,7 +57,8 @@
   height: 30px;
   font-size: 30px;
   color: #1a1a1f;
-  margin-left: 400px;
+  margin-left: 440px;
+  margin-top: 5px;
 }
 
 .closeWindow:hover {

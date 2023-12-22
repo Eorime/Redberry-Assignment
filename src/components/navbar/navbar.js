@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./navbar.css";
 import Logo from "./logo.png";
 import Login from "../login/login.js";
@@ -13,6 +13,17 @@ const Navbar = () => {
   const closeWindow = () => {
     setIsWindowOpen(false);
   };
+
+  useEffect(() => {
+    if (isWindowOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isWindowOpen]);
 
   return (
     <div className="navigation">

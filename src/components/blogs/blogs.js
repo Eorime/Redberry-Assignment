@@ -5,7 +5,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.blog.redberryinternship.ge/api/blogs/341", {
+    fetch("https://api.blog.redberryinternship.ge/api/blogs/{id}", {
       headers: {
         Authorization:
           "Bearer 8db43bd15470636a6dae591a5a2257f0cf9c9e91950d038129a052d57ca467e4",
