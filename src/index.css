@@ -8,5 +8,6 @@ body {
   background-color: #f3f2fa;
   font-family: "firaGo";
   max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
 }

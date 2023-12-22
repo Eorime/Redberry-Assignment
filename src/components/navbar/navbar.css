@@ -1,6 +1,6 @@
 .navigation {
   background-color: white;
-  height: 70px;
+  height: 113px;
   position: fixed;
   overflow: hidden;
   width: 100%;
@@ -10,8 +10,8 @@
 }
 
 .redberry-logo {
-  width: 150px;
-  height: 24px;
+  width: 200px;
+  height: 32px;
   margin-left: 65px;
   position: relative;
 }
@@ -20,11 +20,11 @@
   position: absolute;
   right: 65px;
   font-family: "firaGo";
-  font-size: 14px;
+  font-size: 18px;
   font-weight: "500";
-  padding: 10px 20px;
+  padding: 13px 26px;
   background-color: #5d37f3;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #ffffff;
   border: none;
 }

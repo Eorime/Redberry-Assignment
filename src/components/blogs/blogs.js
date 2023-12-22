@@ -20,31 +20,31 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
+    <div className="blogs-window">
       {blogs.map((blog, index) => (
-        <div className="blogs-window" key={index}>
+        <div key={index}>
           <img
             className="image"
             alt=""
             src={blog.image}
             style={{
-              width: "408px",
-              height: "328px",
-              borderRadius: "12px",
+              width: "544px",
+              height: "437px",
+              borderRadius: "16px",
             }}
           />
-          <p className="author" style={{ fontSize: "16px", fontWeight: "500" }}>
+          <p className="author" style={{ fontSize: "21px", fontWeight: "500" }}>
             {blog.author}
           </p>
-          <p className="date" style={{ color: "#85858D", fontSize: "12px" }}>
+          <p className="date" style={{ color: "#85858D", fontSize: "16px" }}>
             {blog.publish_date}
           </p>
           <h2
             className="blog-header"
             style={{
               color: "#1a1a1f",
-              fontSize: "20px",
-              width: "408px",
+              fontSize: "26px",
+              width: "544px",
               fontWeight: "500",
             }}
           >
@@ -54,8 +54,8 @@ const Blogs = () => {
             className="text"
             style={{
               color: "#404049",
-              fontSize: "16px",
-              width: "408px",
+              fontSize: "21px",
+              width: "544px",
               maxHeight: "56px",
               lineHeight: "28px",
               overflow: "hidden",
@@ -72,7 +72,7 @@ const Blogs = () => {
             className="seeAll"
             style={{
               color: "#5D37F3",
-              fontSize: "14px",
+              fontSize: "18px",
               fontWeight: "500",
               fontFamily: "firaGo",
               border: "none",

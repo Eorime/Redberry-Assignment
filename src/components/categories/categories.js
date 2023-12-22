@@ -19,11 +19,11 @@ const Categories = () => {
           style={{
             color: category.text_color,
             backgroundColor: category.background_color,
-            fontSize: "12px",
+            fontSize: "16px",
             fontFamily: "firaGo",
             fontWeight: "500",
-            borderRadius: "30px",
-            padding: "8px 16px",
+            borderRadius: "40px",
+            padding: "10px 20px",
             border: "none",
             cursor: "pointer",
           }}

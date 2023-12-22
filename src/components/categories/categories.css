@@ -1,10 +1,10 @@
 .categoryButtons {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1080px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 360px;
+  margin-top: 440px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -1,8 +1,8 @@
 .header-image {
-  width: 624px;
-  height: 200px;
+  width: 832;
+  height: 266px;
   position: absolute;
-  right: 65px;
+  right: 80px;
   margin-top: 140px;
   z-index: -1;
 }
@@ -13,6 +13,6 @@ h1 {
   left: 80px;
   font-weight: bold;
   color: #1a1a1f;
-  font-size: 60px;
+  font-size: 85px;
   z-index: -1;
 }

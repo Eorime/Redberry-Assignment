@@ -1,8 +1,11 @@
 .blogs-window {
-  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
   margin-top: 60px;
   margin-left: 65px;
+  margin-right: 65px;
   margin-bottom: 70px;
+  flex-wrap: wrap;
 }
 
 .seeAll:hover {
