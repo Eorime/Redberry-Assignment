@@ -1,0 +1,11 @@
+.blogs-window {
+  /* position: absolute; */
+  margin-top: 60px;
+  margin-left: 65px;
+  margin-bottom: 70px;
+}
+
+.seeAll:hover {
+  cursor: pointer;
+  color: #4922e5;
+}

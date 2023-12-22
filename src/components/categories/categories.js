@@ -21,6 +21,7 @@ const Categories = () => {
             backgroundColor: category.background_color,
             fontSize: "12px",
             fontFamily: "firaGo",
+            fontWeight: "500",
             borderRadius: "30px",
             padding: "8px 16px",
             border: "none",
