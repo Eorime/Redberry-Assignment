@@ -22,7 +22,13 @@ const Blogs = () => {
   return (
     <div className="blogs-window">
       {blogs.map((blog, index) => (
-        <div key={index}>
+        <div
+          className="blog-window"
+          style={{
+            marginBottom: "60px",
+          }}
+          key={index}
+        >
           <img
             className="image"
             alt=""
