@@ -5,6 +5,28 @@ const Login = ({ isWindowOpen, closeWindow }) => {
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
 
+  const handleBack = () => {
+    const requestBody = {
+      email: mail,
+    };
+
+    fetch("https://api.blog.redberryinternship.ge/api/login", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    }).then((respo) => {
+      if (respo.ok) {
+        console.log(respo.status);
+        setMessage("slay");
+      } else {
+        setMessage("ელ-ფოსტა არ მოიძებნა");
+      }
+    });
+  };
+
   const checkForMailFront = (e) => {
     setMail(e.target.value);
   };
@@ -13,11 +35,9 @@ const Login = ({ isWindowOpen, closeWindow }) => {
     e.preventDefault();
     const pattern = /@redberry\.ge$/;
     if (pattern.test(mail)) {
-      setMessage("valid maladec");
-    } else if (pattern.test(mail) !== "") {
-      setMessage("გთხოვთ შეიყვანოთ ელ-ფოსტა");
+      handleBack();
     } else {
-      setMessage("ელ-ფოსტა არ მოიძებნა");
+      setMessage("ელ-ფოსტა უნდა მთავრდებოდეს redberry.ge-ით");
     }
   };
 
