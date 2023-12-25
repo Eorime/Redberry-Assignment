@@ -8,7 +8,7 @@ const Blogs = () => {
     fetch("https://api.blog.redberryinternship.ge/api/blogs", {
       headers: {
         Authorization:
-          "Bearer 8db43bd15470636a6dae591a5a2257f0cf9c9e91950d038129a052d57ca467e4",
+          "Bearer 6a09ce323058c4ba70774a9ae7daa6a5dab74736a51948b4b676e303dbf9e9fb",
       },
     })
       .then((respo) => respo.json())

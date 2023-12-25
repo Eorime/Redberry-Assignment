@@ -1,10 +1,10 @@
 .login-modal {
   background-color: white;
   font-family: "firaGo";
-  border-radius: 12px;
+  border-radius: 16px;
   position: fixed;
-  height: 272px;
-  width: 480px;
+  height: 362px;
+  width: 640px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -26,39 +26,42 @@
 }
 
 .e-mail {
-  padding-right: 350px;
-  font-size: 14px;
+  padding-right: 460px;
+  font-size: 18px;
   color: #1a1a1f;
   font-weight: bold;
-  margin-top: -10px;
+  margin-top: 130px;
   margin-bottom: -4px;
+  position: absolute;
 }
 
 .enter {
-  font-size: 24px;
+  position: absolute;
+  font-size: 32px;
   font-weight: bold;
   color: #1a1a1f;
-  margin-top: 2px;
+  margin-top: 50px;
 }
 
 .input {
-  border-radius: 12px;
-  width: 420px;
-  height: 44px;
+  border-radius: 16px;
+  width: 560px;
+  height: 58px;
   border: 2px solid #5d37f3;
-  font-size: 14px;
-  text-indent: 10px;
-  margin-top: 5px;
-  margin-bottom: -10px;
+  font-size: 18px;
+  text-indent: 13px;
+  margin-top: 165px;
+  margin-bottom: -13px;
+  position: absolute;
 }
 
 .closeWindow {
-  width: 30px;
-  height: 30px;
-  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
   color: #1a1a1f;
-  margin-left: 440px;
-  margin-top: 5px;
+  margin-left: 580px;
+  margin-top: 6px;
 }
 
 .closeWindow:hover {
@@ -75,20 +78,27 @@
 }
 
 .window-login-bttn {
-  width: 430px;
-  height: 44px;
-  border-radius: 12px;
+  width: 570px;
+  height: 58px;
+  font-size: 18px;
+  border-radius: 16px;
   font-family: "firaGo";
   border: 2px solid #5d37f3;
   background-color: #5d37f3;
   color: white;
   outline: none;
-  margin-top: 20px;
+  margin-top: 250px;
   margin-bottom: 40px;
+  position: absolute;
 }
 
 .window-login-bttn:hover {
   cursor: pointer;
   border: 2px solid #4922e5;
   background-color: #4922e5;
+}
+
+.message {
+  color: #ea1919;
+  font-size: 16px;
 }

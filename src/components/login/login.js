@@ -1,7 +1,25 @@
 import "./login.css";
+import { useState } from "react";
 
 const Login = ({ isWindowOpen, closeWindow }) => {
-  // const checkForMail = () => {};
+  const [mail, setMail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const checkForMailFront = (e) => {
+    setMail(e.target.value);
+  };
+
+  const validateFront = (e) => {
+    e.preventDefault();
+    const pattern = /@redberry\.ge$/;
+    if (pattern.test(mail)) {
+      setMessage("valid maladec");
+    } else if (pattern.test(mail) !== "") {
+      setMessage("გთხოვთ შეიყვანოთ ელ-ფოსტა");
+    } else {
+      setMessage("ელ-ფოსტა არ მოიძებნა");
+    }
+  };
 
   return (
     <>
@@ -17,14 +35,13 @@ const Login = ({ isWindowOpen, closeWindow }) => {
               className="input"
               type="email"
               placeholder="Example@redberry.ge"
+              value={mail}
+              onChange={checkForMailFront}
             />
-            <button
-              type="submit"
-              // onClick={checkForMail}
-              className="window-login-bttn"
-            >
+            <button onClick={validateFront} className="window-login-bttn">
               შესვლა
             </button>
+            <p className="message">{message}</p>
           </form>
         </div>
       )}
