@@ -1,0 +1,18 @@
+.blog-container {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-header {
+  color: #1a1a1f;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-image {
+  width: 960px;
+  border-radius: 16px;
+}

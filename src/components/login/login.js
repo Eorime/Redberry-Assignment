@@ -22,6 +22,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
     }).then((respo) => {
       if (respo.ok) {
         setShowSuccess(true);
+        //navigate to create
       } else {
         setMessage("ელ-ფოსტა არ მოიძებნა");
       }
