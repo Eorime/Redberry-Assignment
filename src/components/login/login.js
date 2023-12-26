@@ -1,9 +1,11 @@
 import "./login.css";
 import { useState } from "react";
+import Success from "../success/success";
 
 const Login = ({ isWindowOpen, closeWindow }) => {
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleBack = () => {
     const requestBody = {
@@ -19,8 +21,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
       body: JSON.stringify(requestBody),
     }).then((respo) => {
       if (respo.ok) {
-        console.log(respo.status);
-        setMessage("slay");
+        setShowSuccess(true);
       } else {
         setMessage("ელ-ფოსტა არ მოიძებნა");
       }
@@ -37,7 +38,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
     if (pattern.test(mail)) {
       handleBack();
     } else {
-      setMessage("ელ-ფოსტა უნდა მთავრდებოდეს redberry.ge-ით");
+      setMessage("ელ-ფოსტა უნდა მთავრდებოდეს @redberry.ge-ით");
     }
   };
 
@@ -62,6 +63,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
               შესვლა
             </button>
             <p className="message">{message}</p>
+            {showSuccess && <Success />}
           </form>
         </div>
       )}

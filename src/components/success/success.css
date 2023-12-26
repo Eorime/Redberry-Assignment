@@ -1,0 +1,65 @@
+.login-success {
+  background-color: white;
+  font-family: "firaGo";
+  border-radius: 16px;
+  position: fixed;
+  height: 362px;
+  width: 640px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.success-tick {
+  height: 80px;
+  width: 80px;
+  margin-top: 70px;
+}
+
+.success-message {
+  position: absolute;
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a1a1f;
+  margin-top: 170px;
+}
+
+.ok-button {
+  width: 570px;
+  height: 58px;
+  font-size: 18px;
+  border-radius: 16px;
+  font-family: "firaGo";
+  border: 2px solid #5d37f3;
+  background-color: #5d37f3;
+  color: white;
+  outline: none;
+  margin-top: 250px;
+  margin-bottom: 40px;
+  position: absolute;
+}
+
+.ok-button:hover {
+  cursor: pointer;
+  border: 2px solid #4922e5;
+  background-color: #4922e5;
+}
+
+.closeOk {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #1a1a1f;
+  margin-left: 580px;
+  margin-top: 6px;
+}
+
+.closeOk:hover {
+  cursor: pointer;
+}
