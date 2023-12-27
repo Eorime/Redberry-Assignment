@@ -26,7 +26,12 @@ const Create = () => {
   return (
     <div className="zhuzhu">
       <img src={Logo} className="logo" alt="Redberry Logo" />
-      <img src={BackArrow} className="back-arrow" alt="back-arrow" />
+      <img
+        src={BackArrow}
+        className="back-arrow"
+        alt="back-arrow"
+        style={{ position: "fixed" }}
+      />
       <h1 className="form-name">ბლოგის დამატება</h1>
       <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
       <label htmlFor="image-input" className="custom-upload">
