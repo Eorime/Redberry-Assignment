@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./blogs.css";
+import SeeMore from "./seemore.png";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -30,7 +31,7 @@ const Blogs = () => {
           key={index}
         >
           <img
-            className="image"
+            className="blogs-image"
             alt=""
             src={blog.image}
             style={{
@@ -39,14 +40,20 @@ const Blogs = () => {
               borderRadius: "16px",
             }}
           />
-          <p className="author" style={{ fontSize: "21px", fontWeight: "500" }}>
+          <p
+            className="blogs-author"
+            style={{ fontSize: "21px", fontWeight: "500" }}
+          >
             {blog.author}
           </p>
-          <p className="date" style={{ color: "#85858D", fontSize: "16px" }}>
+          <p
+            className="blogs-date"
+            style={{ color: "#85858D", fontSize: "16px" }}
+          >
             {blog.publish_date}
           </p>
           <h2
-            className="blog-header"
+            className="blogs-header"
             style={{
               color: "#1a1a1f",
               fontSize: "26px",
@@ -57,7 +64,7 @@ const Blogs = () => {
             {blog.title}
           </h2>
           <p
-            className="text"
+            className="blogs-text"
             style={{
               color: "#404049",
               fontSize: "21px",
@@ -86,6 +93,7 @@ const Blogs = () => {
             }}
           >
             სრულად ნახვა
+            <img className="see-more" src={SeeMore} />
           </button>
         </div>
       ))}

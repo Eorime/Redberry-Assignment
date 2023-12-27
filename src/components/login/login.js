@@ -1,6 +1,7 @@
 import "./login.css";
 import { useState } from "react";
 import Success from "../success/success";
+import Invalid from "./invalid.png";
 
 const Login = ({ isWindowOpen, closeWindow }) => {
   const [mail, setMail] = useState("");
@@ -48,6 +49,19 @@ const Login = ({ isWindowOpen, closeWindow }) => {
       {isWindowOpen && (
         <div className="overlay">
           <form className="login-modal">
+            {message && (
+              <img
+                src={Invalid}
+                className="invalid-image"
+                alt="invalid icon"
+                style={{
+                  width: "22px",
+                  position: "absolute",
+                  marginTop: "235px",
+                  paddingRight: "540px",
+                }}
+              />
+            )}
             <span className="closeWindow" onClick={closeWindow}>
               &times;
             </span>

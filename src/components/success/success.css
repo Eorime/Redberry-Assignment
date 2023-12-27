@@ -39,9 +39,10 @@
   background-color: #5d37f3;
   color: white;
   outline: none;
-  margin-top: 250px;
-  margin-bottom: 40px;
+  /* margin-top: 260px; */
+  /* margin-bottom: 40px; */
   position: absolute;
+  bottom: 40px;
 }
 
 .ok-button:hover {

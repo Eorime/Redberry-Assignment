@@ -87,8 +87,7 @@
   background-color: #5d37f3;
   color: white;
   outline: none;
-  margin-top: 250px;
-  margin-bottom: 40px;
+  bottom: 40px;
   position: absolute;
 }
 
@@ -101,4 +100,7 @@
 .message {
   color: #ea1919;
   font-size: 16px;
+  position: absolute;
+  margin-top: 236px;
+  left: 70px;
 }
