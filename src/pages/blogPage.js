@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import "./blogPage.css";
+import BackArrow from "./backArrow.png";
 
 const BlogPage = () => {
   const [blogData, setBlogData] = useState(null);

@@ -36,7 +36,7 @@ const Blogs = () => {
             src={blog.image}
             style={{
               width: "544px",
-              height: "437px",
+              height: "423px",
               borderRadius: "16px",
             }}
           />
@@ -48,7 +48,7 @@ const Blogs = () => {
           </p>
           <p
             className="blogs-date"
-            style={{ color: "#85858D", fontSize: "16px" }}
+            style={{ color: "#85858D", fontSize: "16px", marginTop: "-12px" }}
           >
             {blog.publish_date}
           </p>
@@ -63,6 +63,30 @@ const Blogs = () => {
           >
             {blog.title}
           </h2>
+          <div className="blogs-categories">
+            {blog.categories.map((category) => (
+              <div
+                className="blog-category"
+                style={{
+                  color: category.text_color,
+                  backgroundColor: category.background_color,
+                  fontSize: "16px",
+                  fontFamily: "firaGo",
+                  fontWeight: "500",
+                  borderRadius: "40px",
+                  padding: "10px 20px",
+                  border: "none",
+                  cursor: "default",
+                  display: "inline-block",
+                  whiteSpace: "nowrap",
+                  marginRight: "15px",
+                }}
+                key={category.id}
+              >
+                {category.title}
+              </div>
+            ))}
+          </div>
           <p
             className="blogs-text"
             style={{
@@ -93,7 +117,7 @@ const Blogs = () => {
             }}
           >
             სრულად ნახვა
-            <img className="see-more" src={SeeMore} />
+            <img className="see-more" alt="see more" src={SeeMore} />
           </button>
         </div>
       ))}
