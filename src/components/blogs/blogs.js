@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./blogs.css";
 import SeeMore from "./seemore.png";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -105,20 +106,22 @@ const Blogs = () => {
           >
             {blog.description}
           </p>
-          <button
+          <Link
+            to={`/blogs/${blog.id}`}
             className="seeAll"
             style={{
               color: "#5D37F3",
-              fontSize: "18px",
+              fontSize: "20px",
               fontWeight: "500",
               fontFamily: "firaGo",
               border: "none",
               backgroundColor: "transparent",
+              textDecoration: "none",
             }}
           >
             სრულად ნახვა
-            <img className="see-more" alt="see more" src={SeeMore} />
-          </button>
+          </Link>
+          <img className="see-more" alt="see more" src={SeeMore} />
         </div>
       ))}
     </div>

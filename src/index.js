@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route index element={<App />} />
         <Route path="/createBlog" element={<Create />} />
-        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blogs/:id" element={<BlogPage />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

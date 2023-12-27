@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import "./blogPage.css";
 import BackArrow from "./backArrow.png";
+import { useParams } from "react-router-dom";
 
 const BlogPage = () => {
   const [blogData, setBlogData] = useState(null);
+  let { id } = useParams();
 
   useEffect(() => {
-    fetch("https://api.blog.redberryinternship.ge/api/blogs/1142", {
+    fetch(`https://api.blog.redberryinternship.ge/api/blogs/${id}`, {
       headers: {
         Authorization:
           "Bearer 6a09ce323058c4ba70774a9ae7daa6a5dab74736a51948b4b676e303dbf9e9fb",
