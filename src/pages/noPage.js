@@ -1,7 +1,7 @@
 const NoPage = () => {
   return (
     <div>
-      <h1> this page dont exist bruv</h1>
+      <h1> This page doesn't exist :c </h1>
     </div>
   );
 };

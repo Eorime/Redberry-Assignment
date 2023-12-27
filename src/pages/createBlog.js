@@ -24,7 +24,7 @@ const Create = () => {
   };
 
   return (
-    <div className="zhuzhu">
+    <div className="full-container">
       <img src={Logo} className="logo" alt="Redberry Logo" />
       <img
         src={BackArrow}
@@ -55,7 +55,9 @@ const Create = () => {
           onChange={change}
         />
       </label>
-      <button onClick={handleSubmit}>Submit</button>
+      <button className="publish" onClick={handleSubmit}>
+        გამოქვეყნება
+      </button>
     </div>
   );
 };

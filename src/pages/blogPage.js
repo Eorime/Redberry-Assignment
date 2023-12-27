@@ -21,7 +21,6 @@ const BlogPage = () => {
       })
       .then((data) => {
         setBlogData(data);
-        // console.log(blogData.description);
       });
   }, []);
 
