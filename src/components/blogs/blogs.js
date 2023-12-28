@@ -2,16 +2,25 @@ import "./blogs.css";
 import SeeMore from "./seemore.png";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useMemo } from "react";
 
-const Blogs = () => {
+const Blogs = ({ categoryId }) => {
   const [data, error, isLoading] = useFetch(
     "https://api.blog.redberryinternship.ge/api/blogs"
   );
+  const filteredData = useMemo(() => {
+    return data.data?.filter((fdat) => {
+      return categoryId
+        ? !!fdat.categories.find((cat) => cat.id === categoryId)
+        : true;
+    });
+  }, [categoryId, data.data]);
+  console.log(data);
 
   return (
     <div className="blogs-window">
-      {data.data &&
-        data.data.map((blog) => (
+      {filteredData &&
+        filteredData.map((blog) => (
           <div
             className="blog-window"
             style={{
