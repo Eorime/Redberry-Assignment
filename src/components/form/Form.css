@@ -1,0 +1,110 @@
+.form input {
+  border-radius: 14px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  margin-top: 500px;
+  font-size: 16px;
+}
+
+#author {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  font-family: "firaGo";
+  margin-top: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+#title {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: "firaGo";
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#description {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: "firaGo";
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#date {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: "firaGo";
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+#category {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: "firaGo";
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#email {
+  border: 1.5px solid #e4e3eb;
+  background-color: #fcfcfd;
+  width: 288px;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: "firaGo";
+  padding-top: 14px;
+  padding-bottom: 14px;
+}

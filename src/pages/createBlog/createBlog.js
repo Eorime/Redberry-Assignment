@@ -3,16 +3,11 @@ import Logo from "./logo.png";
 import BackArrow from "./backArrow.png";
 import { useState } from "react";
 import InputIcon from "./upload.png";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { routes } from "../../constants/routes";
+import Form from "../../components/form/Form";
 
 const Create = () => {
-  const navigate = useNavigate();
-
-  const handleArrowClick = () => {
-    navigate(routes.Home);
-  };
-
   const [uploadedFile, setUploadedFile] = useState(null);
   const [fileUploaded, setFileUploaded] = useState(false);
 
@@ -27,21 +22,17 @@ const Create = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="full-container">
       <img src={Logo} className="logo" alt="Redberry Logo" />
-      <button className="arrow-button" onClick={handleArrowClick}>
+      <Link className="arrow-Link" to={routes.Home}>
         <img
           src={BackArrow}
           className="back-arrow"
           alt="back-arrow"
           style={{ position: "fixed" }}
         />
-      </button>
+      </Link>
       <h1 className="form-name">ბლოგის დამატება</h1>
       <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
       <label htmlFor="image-input" className="custom-upload">
@@ -65,9 +56,7 @@ const Create = () => {
           onChange={change}
         />
       </label>
-      <button className="publish" onClick={handleSubmit}>
-        გამოქვეყნება
-      </button>
+      <Form />
     </div>
   );
 };
