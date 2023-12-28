@@ -1,8 +1,8 @@
 import { routes } from "../constants/routes";
-import BlogPage from "../pages/blogPage";
-import Create from "../pages/createBlog";
-import homePage from "../pages/homePage";
-import NoPage from "../pages/noPage";
+import BlogPage from "../pages/blogPage/blogPage";
+import Create from "../pages/createBlog/createBlog";
+import homePage from "../pages/homePage/homePage";
+import NoPage from "../pages/noPage/noPage";
 
 export const appRoutes = [
   {

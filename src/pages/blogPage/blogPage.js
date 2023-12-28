@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import Navbar from "../components/navbar/navbar";
+import Navbar from "../../components/navbar/navbar";
 import "./blogPage.css";
 import BackArrow from "./backArrow.png";
 import { useParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 const BlogPage = () => {
   let { id } = useParams();

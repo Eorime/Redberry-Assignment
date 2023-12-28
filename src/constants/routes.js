@@ -1,7 +1,7 @@
 const Home = "/";
 const BlogPage = "/blogs/:id";
 const CreateBlog = "/createBlog";
-const noPage = "/noPage";
+const noPage = "/*";
 
 export const routes = {
   Home,

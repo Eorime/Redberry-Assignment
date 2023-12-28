@@ -1,5 +1,5 @@
 import "./createBlog.css";
-import Logo from "../components/navbar/logo.png";
+// import Logo from "./components/navbar/logo.png";
 import BackArrow from "./backArrow.png";
 import { useState } from "react";
 import InputIcon from "./upload.png";
@@ -25,7 +25,7 @@ const Create = () => {
 
   return (
     <div className="full-container">
-      <img src={Logo} className="logo" alt="Redberry Logo" />
+      {/* <img src={Logo} className="logo" alt="Redberry Logo" /> */}
       <img
         src={BackArrow}
         className="back-arrow"
