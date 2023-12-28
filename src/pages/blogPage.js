@@ -33,28 +33,29 @@ const BlogPage = () => {
           </p>
           <h1 className="blog-header">{data.title}</h1>
           <div className="blog-categories">
-            {data.categories.map((category) => (
-              <div
-                className="blogpage-category"
-                style={{
-                  color: category.text_color,
-                  backgroundColor: category.background_color,
-                  fontSize: "13px",
-                  fontFamily: "firaGo",
-                  fontWeight: "500",
-                  borderRadius: "40px",
-                  padding: "8px 13px",
-                  border: "none",
-                  cursor: "default",
-                  display: "inline-block",
-                  whiteSpace: "nowrap",
-                  marginRight: "15px",
-                }}
-                key={category.id}
-              >
-                {category.title}
-              </div>
-            ))}
+            {data.categories &&
+              data.categories.map((category) => (
+                <div
+                  className="blogpage-category"
+                  style={{
+                    color: category.text_color,
+                    backgroundColor: category.background_color,
+                    fontSize: "13px",
+                    fontFamily: "firaGo",
+                    fontWeight: "500",
+                    borderRadius: "40px",
+                    padding: "8px 13px",
+                    border: "none",
+                    cursor: "default",
+                    display: "inline-block",
+                    whiteSpace: "nowrap",
+                    marginRight: "15px",
+                  }}
+                  key={category.id}
+                >
+                  {category.title}
+                </div>
+              ))}
           </div>
           <div className="blog-image-container">
             <img className="blog-image" alt="" src={data.image} />
