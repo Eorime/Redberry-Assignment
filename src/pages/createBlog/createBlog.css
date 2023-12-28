@@ -75,3 +75,7 @@ body {
 .custom-upload:hover {
   cursor: pointer;
 }
+
+.back-arrow:hover {
+  cursor: pointer;
+}

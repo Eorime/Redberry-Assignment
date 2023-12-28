@@ -64,3 +64,7 @@
   color: #404049;
   margin-top: 210px;
 }
+
+.arrow-button:hover {
+  cursor: pointer;
+}

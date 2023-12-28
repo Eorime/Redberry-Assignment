@@ -1,10 +1,18 @@
 import "./createBlog.css";
-// import Logo from "./components/navbar/logo.png";
+import Logo from "./logo.png";
 import BackArrow from "./backArrow.png";
 import { useState } from "react";
 import InputIcon from "./upload.png";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../../constants/routes";
 
 const Create = () => {
+  const navigate = useNavigate();
+
+  const handleArrowClick = () => {
+    navigate(routes.Home);
+  };
+
   const [uploadedFile, setUploadedFile] = useState(null);
   const [fileUploaded, setFileUploaded] = useState(false);
 
@@ -25,13 +33,15 @@ const Create = () => {
 
   return (
     <div className="full-container">
-      {/* <img src={Logo} className="logo" alt="Redberry Logo" /> */}
-      <img
-        src={BackArrow}
-        className="back-arrow"
-        alt="back-arrow"
-        style={{ position: "fixed" }}
-      />
+      <img src={Logo} className="logo" alt="Redberry Logo" />
+      <button className="arrow-button" onClick={handleArrowClick}>
+        <img
+          src={BackArrow}
+          className="back-arrow"
+          alt="back-arrow"
+          style={{ position: "fixed" }}
+        />
+      </button>
       <h1 className="form-name">ბლოგის დამატება</h1>
       <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
       <label htmlFor="image-input" className="custom-upload">

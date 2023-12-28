@@ -3,9 +3,16 @@ import "./blogPage.css";
 import BackArrow from "./backArrow.png";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../../constants/routes";
 
 const BlogPage = () => {
   let { id } = useParams();
+  const navigate = useNavigate();
+
+  const handleArrowClick = () => {
+    navigate(routes.Home);
+  };
 
   const [data, error, isLoading] = useFetch(
     `https://api.blog.redberryinternship.ge/api/blogs/${id}`
@@ -16,12 +23,14 @@ const BlogPage = () => {
       <Navbar />
       {data && (
         <div>
-          <img
-            src={BackArrow}
-            className="back-arrow"
-            alt="back-arrow"
-            style={{ position: "fixed" }}
-          />
+          <button className="arrow-button" onClick={handleArrowClick}>
+            <img
+              src={BackArrow}
+              className="back-arrow"
+              alt="back-arrow"
+              style={{ position: "fixed" }}
+            />
+          </button>
           <p className="blog-author">{data.author}</p>
           <p className="blog-date">{data.publish_date}</p>
           <p className="blog-email">

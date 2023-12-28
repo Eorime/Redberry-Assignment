@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 import Logo from "./logo.png";
 import Login from "../login/login.js";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
