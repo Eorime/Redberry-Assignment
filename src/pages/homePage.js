@@ -8,7 +8,7 @@ const homePage = () => {
   return (
     <div>
       <Navbar />
-      <Header />
+      <Header />;
       <Categories />
       <Blogs />
     </div>

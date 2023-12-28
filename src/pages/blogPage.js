@@ -3,33 +3,19 @@ import Navbar from "../components/navbar/navbar";
 import "./blogPage.css";
 import BackArrow from "./backArrow.png";
 import { useParams } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 const BlogPage = () => {
-  const [blogData, setBlogData] = useState(null);
   let { id } = useParams();
 
-  useEffect(() => {
-    fetch(`https://api.blog.redberryinternship.ge/api/blogs/${id}`, {
-      headers: {
-        Authorization:
-          "Bearer 6a09ce323058c4ba70774a9ae7daa6a5dab74736a51948b4b676e303dbf9e9fb",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setBlogData(data);
-      });
-  }, []);
+  const [data, error, isLoading] = useFetch(
+    `https://api.blog.redberryinternship.ge/api/blogs/${id}`
+  );
 
   return (
     <div className="blog-container">
       <Navbar />
-      {blogData && (
+      {data && (
         <div>
           <img
             src={BackArrow}
@@ -37,17 +23,17 @@ const BlogPage = () => {
             alt="back-arrow"
             style={{ position: "fixed" }}
           />
-          <p className="blog-author">{blogData.author}</p>
-          <p className="blog-date">{blogData.publish_date}</p>
+          <p className="blog-author">{data.author}</p>
+          <p className="blog-date">{data.publish_date}</p>
           <p className="blog-email">
             <span style={{ marginLeft: "-4px", marginRight: "8px" }}>
               &#8226;
             </span>
-            {blogData.email}
+            {data.email}
           </p>
-          <h1 className="blog-header">{blogData.title}</h1>
+          <h1 className="blog-header">{data.title}</h1>
           <div className="blog-categories">
-            {blogData.categories.map((category) => (
+            {data.categories.map((category) => (
               <div
                 className="blogpage-category"
                 style={{
@@ -71,9 +57,9 @@ const BlogPage = () => {
             ))}
           </div>
           <div className="blog-image-container">
-            <img className="blog-image" alt="" src={blogData.image} />
+            <img className="blog-image" alt="" src={data.image} />
           </div>
-          <p className="blog-text">{blogData.description}</p>
+          <p className="blog-text">{data.description}</p>
         </div>
       )}
     </div>

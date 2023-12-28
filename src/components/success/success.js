@@ -1,19 +1,20 @@
 import Valid from "./valid.png";
 import "./success.css";
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../../constants/routes";
 
 const Success = () => {
-  // const history = useHistory();
+  const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   history.push("/");
-  // };
+  const handleClick = () => {
+    navigate(routes.Home);
+  };
 
   return (
     <div className="login-success">
       <img src={Valid} className="success-tick" alt="Header"></img>
       <p className="success-message">წარმატებული ავტორიზაცია</p>
-      <button className="ok-button" onClick={""}>
+      <button className="ok-button" onClick={handleClick}>
         კარგი
       </button>
       <span className="closeOk" /*es ar mushaobs */>&times;</span>
