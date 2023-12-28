@@ -55,6 +55,11 @@
   position: absolute;
 }
 
+.error {
+  border: 2px solid #ea1919;
+  background-color: #faf2f3;
+}
+
 .closeWindow {
   width: 40px;
   height: 40px;

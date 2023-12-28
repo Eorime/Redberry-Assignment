@@ -23,7 +23,6 @@ const Login = ({ isWindowOpen, closeWindow }) => {
     }).then((respo) => {
       if (respo.ok) {
         setShowSuccess(true);
-        //navigate to create
       } else {
         setMessage("ელ-ფოსტა არ მოიძებნა");
       }
@@ -61,6 +60,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
                   paddingRight: "540px",
                 }}
               />
+              //aq awitlebs inputis borders
             )}
             <span className="closeWindow" onClick={closeWindow}>
               &times;
@@ -68,7 +68,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
             <p className="enter">შესვლა</p>
             <p className="e-mail">ელ-ფოსტა</p>
             <input
-              className="input"
+              className={message ? "input error" : "input"}
               type="email"
               placeholder="Example@redberry.ge"
               value={mail}

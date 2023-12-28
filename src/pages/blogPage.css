@@ -6,32 +6,30 @@
 }
 
 .blog-header {
-  position: absolute;
   color: #1a1a1f;
   font-size: 26px;
   font-weight: bold;
-  top: 72%;
-  left: 45.3%;
-  transform: translateX(-50%);
-  max-width: 960px;
+  margin-top: 555px;
+  margin-left: 390px;
+  max-width: 970px;
 }
 
 .blog-categories {
   position: absolute;
-  margin-top: 552px;
+  margin-top: 570px;
   max-width: 960px;
 }
 
 .blog-author {
   position: absolute;
-  top: 65%;
+  margin-top: 440px;
   color: #1a1a1f;
   font-weight: 500;
 }
 
 .blog-date {
   position: absolute;
-  top: 67.7%;
+  margin-top: 470px;
   color: #85858d;
   font-size: 15px;
 }
@@ -40,8 +38,8 @@
   position: absolute;
   color: #85858d;
   font-size: 15px;
-  top: 67.7%;
-  left: 29%;
+  margin-top: 470px;
+  margin-left: 80px;
 }
 
 .blog-image-container {
@@ -64,5 +62,5 @@
   max-width: 960px;
   font-size: 21px;
   color: #404049;
-  top: 84%;
+  margin-top: 210px;
 }
