@@ -28,7 +28,6 @@ const Login = ({
                   paddingRight: "540px",
                 }}
               />
-              //aq awitlebs inputis borders
             )}
             <span className="closeWindow" onClick={closeWindow}>
               &times;

@@ -15,8 +15,30 @@ const Form = () => {
     setInputValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleEndBtnClick = async () => {
+    try {
+      const data = new FormData();
+      data.append("name", inputValue.author);
+      data.append("name", inputValue.title);
+      data.append("name", inputValue.description);
+      data.append("name", inputValue.date);
+      data.append("name", inputValue.category);
+      data.append("name", inputValue.email);
+
+      const response = await fetch("https://api.blog.redberryinternship.ge/", {
+        headers: {
+          Authorization:
+            "Bearer 6a09ce323058c4ba70774a9ae7daa6a5dab74736a51948b4b676e303dbf9e9fb",
+        },
+        method: "POST",
+        body: data,
+      });
+
+      if (response.ok) {
+        console.log(response);
+      } else {
+      }
+    } catch (error) {}
   };
 
   console.log(inputValue);
@@ -164,7 +186,7 @@ const Form = () => {
           placeholder="Example@redberry.ge"
         />
       </div>
-      <button className="publish" onClick={handleSubmit}>
+      <button className="publish" onClick={handleEndBtnClick}>
         გამოქვეყნება
       </button>
     </div>
