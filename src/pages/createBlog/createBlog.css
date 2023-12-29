@@ -1,5 +1,7 @@
 body {
   background-color: #fbfaff;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .full-container {
@@ -21,10 +23,11 @@ body {
 
 .form-name {
   font-size: 42px;
-  font-weight: bold;
+  font-weight: 700;
+  margin-left: 415px;
+  margin-right: 480px;
   color: #1a1a1f;
-  left: 480px;
-  top: 160px;
+  margin-top: 15px;
   position: absolute;
 }
 
@@ -47,7 +50,8 @@ body {
   border: 2px dashed #85858d;
   font-size: 18px;
   margin-top: 780px;
-  margin-left: -160px;
+  margin-left: 360px;
+  margin-right: 480px;
   background-color: #f4f3ff;
   display: flex;
   align-items: center;
@@ -58,8 +62,8 @@ body {
 .custom-upload-text {
   font-size: 18px;
   font-weight: 500;
-  margin-top: 130px;
-  margin-left: 400px;
+  margin-top: 125px;
+  margin-left: 420px;
 }
 
 .input-icon {

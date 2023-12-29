@@ -1,48 +1,17 @@
 import "./login.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Success from "../success/success";
 import Invalid from "./invalid.png";
 
-const Login = ({ isWindowOpen, closeWindow }) => {
-  const [mail, setMail] = useState("");
-  const [message, setMessage] = useState("");
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const handleBack = () => {
-    const requestBody = {
-      email: mail,
-    };
-
-    fetch("https://api.blog.redberryinternship.ge/api/login", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    }).then((respo) => {
-      if (respo.ok) {
-        setShowSuccess(true);
-      } else {
-        setMessage("ელ-ფოსტა არ მოიძებნა");
-      }
-    });
-  };
-
-  const checkForMailFront = (e) => {
-    setMail(e.target.value);
-  };
-
-  const validateFront = (e) => {
-    e.preventDefault();
-    const pattern = /@redberry\.ge$/;
-    if (pattern.test(mail)) {
-      handleBack();
-    } else {
-      setMessage("ელ-ფოსტა უნდა მთავრდებოდეს @redberry.ge-ით");
-    }
-  };
-
+const Login = ({
+  isWindowOpen,
+  closeWindow,
+  mail,
+  checkForMailFront,
+  validateFront,
+  showSuccess,
+  message,
+}) => {
   return (
     <>
       {isWindowOpen && (
@@ -60,6 +29,7 @@ const Login = ({ isWindowOpen, closeWindow }) => {
                   paddingRight: "540px",
                 }}
               />
+              //aq awitlebs inputis borders
             )}
             <span className="closeWindow" onClick={closeWindow}>
               &times;
@@ -77,8 +47,10 @@ const Login = ({ isWindowOpen, closeWindow }) => {
               შესვლა
             </button>
             <p className="message">{message}</p>
-            {showSuccess && <Success />}
           </form>
+          {showSuccess && (
+            <Success onClick={closeWindow} showSuccess={showSuccess} />
+          )}
         </div>
       )}
     </>

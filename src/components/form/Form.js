@@ -25,7 +25,10 @@ const Form = () => {
   return (
     <div className="form">
       <div className="author">
-        <label for="username" style={{ fontWeight: "500", color: "#1a1a1f" }}>
+        <label
+          htmlFor="username"
+          style={{ fontWeight: "500", color: "#1a1a1f" }}
+        >
           ავტორი *
         </label>
         <input
@@ -35,10 +38,14 @@ const Form = () => {
           name="author"
           placeholder="შეიყვანეთ ავტორი"
         ></input>
-        <ul className="author-validation"></ul>
+        <ul className="author-validation">
+          <li>მინიმუმ 4 სიმბოლო</li>
+          <li>მინიმუმ ორი სიტყვა</li>
+          <li>მხოლოდ ქართული სიმბოლოები</li>
+        </ul>
       </div>
       <div className="title">
-        <label for="title" style={{ fontWeight: "500", color: "#1a1a1f" }}>
+        <label htmlFor="title" style={{ fontWeight: "500", color: "#1a1a1f" }}>
           სათაური *
         </label>
         <input
@@ -48,22 +55,27 @@ const Form = () => {
           name="title"
           placeholder="შეიყვანეთ სათაური"
         ></input>
+        <ul className="title-validation">
+          <li>მინიმუმ 4 სიმბოლო</li>
+        </ul>
       </div>
-      <label for="description" style={{ fontWeight: "500", color: "#1a1a1f" }}>
-        აღწერა *
-      </label>
-      <input
-        onChange={handleChange}
-        id="description"
-        type="text"
-        name="description"
-        placeholder="შეიყვანეთ ავტორი"
-      ></input>
-      <div className="date">
+      <div className="description">
         <label
-          for="description"
+          htmlFor="description"
           style={{ fontWeight: "500", color: "#1a1a1f" }}
         >
+          აღწერა *
+        </label>
+        <input
+          onChange={handleChange}
+          id="description"
+          type="text"
+          name="description"
+          placeholder="შეიყვანეთ აღწერა"
+        ></input>
+      </div>
+      <div className="date">
+        <label htmlFor="date" style={{ fontWeight: "500", color: "#1a1a1f" }}>
           გამოქვეყნების თარიღი *
         </label>
         <input
@@ -75,7 +87,7 @@ const Form = () => {
       </div>
       <div className="category">
         <label
-          for="description"
+          htmlFor="category"
           style={{ fontWeight: "500", color: "#1a1a1f" }}
         >
           კატეგორია
@@ -89,7 +101,7 @@ const Form = () => {
         ></input>
       </div>
       <div className="email">
-        <label for="email" style={{ fontWeight: "500", color: "#1a1a1f" }}>
+        <label htmlFor="email" style={{ fontWeight: "500", color: "#1a1a1f" }}>
           ელ-ფოსტა
         </label>
         <input
