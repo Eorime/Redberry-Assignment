@@ -4,12 +4,14 @@ import { Link, useSearchParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import useFilteredData from "../../hooks/useFilteredData";
 
-const Blogs = () => {
+const Blogs = ({}) => {
   const [data, error, isLoading] = useFetch(
     "https://api.blog.redberryinternship.ge/api/blogs"
   );
 
   const [filteredData] = useFilteredData();
+
+  console.log(filteredData);
 
   return (
     <div className="blogs-window">
