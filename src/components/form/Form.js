@@ -21,6 +21,45 @@ const Form = () => {
 
   console.log(inputValue);
 
+  const minFourLetter =
+    inputValue.author.length === 0
+      ? "#85858D"
+      : inputValue.author.length < 4
+      ? "#EA1919 "
+      : "#14D81C";
+
+  const minFourLetterTitle =
+    inputValue.title.length === 0
+      ? "#85858D"
+      : inputValue.title.length < 4
+      ? "#EA1919 "
+      : "#14D81C";
+
+  const minFourLetterDescription =
+    inputValue.description.length === 0
+      ? "#85858D"
+      : inputValue.description.length < 4
+      ? "#EA1919 "
+      : "#14D81C";
+
+  const authorWords = inputValue.author.trim().split(/\s+/);
+  const minTwoWord =
+    inputValue.author === ""
+      ? { borderColor: "#EA1919 ", color: "#85858D" }
+      : authorWords.length < 2
+      ? { borderColor: "#EA1919 ", color: "#EA1919 " }
+      : { borderColor: "#14D81C", color: "#14D81C" };
+
+  const georgianRegex = /^[\u10A0-\u10FF\s]+$/;
+  const inputLangColor =
+    inputValue.author === ""
+      ? "#85858D"
+      : !georgianRegex.test(inputValue.author)
+      ? "#EA1919"
+      : inputValue.author.trim().split(/\s+/).length < 2
+      ? "#EA1919"
+      : "#14D81C";
+
   return (
     <div className="form">
       <div className="row">
@@ -33,15 +72,22 @@ const Form = () => {
           </label>
           <input
             onChange={handleChange}
+            style={{ borderColor: minTwoWord.borderColor }}
             id="author"
             type="text"
             name="author"
             placeholder="შეიყვანეთ ავტორი"
           />
           <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
-            <li>მინიმუმ 4 სიმბოლო</li>
-            <li>მინიმუმ ორი სიტყვა</li>
-            <li>მხოლოდ ქართული სიმბოლოები</li>
+            <li style={{ color: minFourLetter }}>მინიმუმ 4 სიმბოლო</li>
+            <li
+              style={{
+                color: minTwoWord.color,
+              }}
+            >
+              მინიმუმ ორი სიტყვა
+            </li>
+            <li style={{ color: inputLangColor }}>მხოლოდ ქართული სიმბოლოები</li>
           </ul>
         </div>
         <div className="column title">
@@ -59,7 +105,7 @@ const Form = () => {
             placeholder="შეიყვანეთ სათაური"
           />
           <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
-            <li>მინიმუმ 4 სიმბოლო</li>
+            <li style={{ color: minFourLetterTitle }}>მინიმუმ 4 სიმბოლო</li>
           </ul>
         </div>
       </div>
@@ -78,7 +124,7 @@ const Form = () => {
           placeholder="შეიყვანეთ აღწერა"
         />
         <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
-          <li>მინიმუმ 4 სიმბოლო</li>
+          <li style={{ color: minFourLetterDescription }}>მინიმუმ 4 სიმბოლო</li>
         </ul>
       </div>
 

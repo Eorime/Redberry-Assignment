@@ -48,8 +48,6 @@ const Create = () => {
         }}
         className="form-custom"
       >
-        <h1 className="form-name">ბლოგის დამატება</h1>
-        <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
         <label htmlFor="image-input" className="custom-upload">
           <span>
             {!fileUploaded && (
