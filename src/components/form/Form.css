@@ -25,7 +25,6 @@ body {
 }
 
 .author,
-.description,
 .date,
 .category,
 .email {
@@ -33,6 +32,12 @@ body {
   flex-direction: column;
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.description {
+  margin-top: 10px;
+  width: 800px;
+  height: 124px;
 }
 
 .title,

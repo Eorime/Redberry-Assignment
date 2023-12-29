@@ -1,21 +1,22 @@
 import "./blogs.css";
 import SeeMore from "./seemore.png";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { useMemo } from "react";
 
-const Blogs = ({ categoryId }) => {
+const Blogs = () => {
   const [data, error, isLoading] = useFetch(
     "https://api.blog.redberryinternship.ge/api/blogs"
   );
+
+  const [params] = useSearchParams();
+  const id = params.get("selectedId");
+
   const filteredData = useMemo(() => {
     return data.data?.filter((fdat) => {
-      return categoryId
-        ? !!fdat.categories.find((cat) => cat.id === categoryId)
-        : true;
+      return +id ? !!fdat.categories.find((cat) => cat.id === +id) : true;
     });
-  }, [categoryId, data.data]);
-  console.log(data);
+  }, [id, data.data]);
 
   return (
     <div className="blogs-window">
@@ -124,7 +125,5 @@ const Blogs = ({ categoryId }) => {
     </div>
   );
 };
-
-/*avtori, gamoqveynebis tarigi, satauri, kategoriebi da extract*/
 
 export default Blogs;

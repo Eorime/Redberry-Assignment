@@ -1,5 +1,4 @@
 import "./login.css";
-import { useEffect, useState } from "react";
 import Success from "../success/success";
 import Invalid from "./invalid.png";
 
