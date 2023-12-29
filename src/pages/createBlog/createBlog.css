@@ -12,6 +12,7 @@ body {
   top: 0%;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .full-container {
@@ -67,11 +68,12 @@ body {
 .custom-upload-text {
   font-size: 18px;
   font-weight: 500;
+  margin-right: 200px;
 }
 
 .input-icon {
   width: 53px;
-  margin-left: 150px;
+  margin-left: 300px;
   margin-bottom: 30px;
 }
 
@@ -87,4 +89,10 @@ body {
   padding: 20px;
   margin-top: 30px;
   margin-left: 470px;
+}
+
+.form-name {
+}
+
+.custom-upload-text {
 }

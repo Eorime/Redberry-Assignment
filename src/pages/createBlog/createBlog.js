@@ -40,33 +40,26 @@ const Create = () => {
           style={{ position: "fixed" }}
         />
       </Link>
-      <div className="form-custom">
-        <h1
-          className="form-name"
-          style={{
-            marginTop: "-310px",
-            marginLeft: "-100px",
-            position: "relative",
-          }}
-        >
-          ბლოგის დამატება
-        </h1>
-        <h1
-          className="custom-upload-text"
-          style={{ marginLeft: "410px", fontWeight: "500" }}
-        >
-          ატვირთეთ ფოტო
-        </h1>
+      <div
+        style={{
+          marginTop: "-240px",
+          marginLeft: "-10px",
+          position: "relative",
+        }}
+        className="form-custom"
+      >
+        <h1 className="form-name">ბლოგის დამატება</h1>
+        <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
         <label htmlFor="image-input" className="custom-upload">
           <span>
             {!fileUploaded && (
               <img className="input-icon" src={InputIcon} alt="Upload Icon" />
             )}
             {fileUploaded ? (
-              <span style={{ marginLeft: "10px" }}>{uploadedFile.name} </span>
+              <span style={{ marginRight: "10px" }}>{uploadedFile.name} </span>
             ) : (
               <>
-                ჩააგდეთ ფაილი აქ ან{" "}
+                ჩააგდეთ ფაილი აქ ან
                 <span style={{ textDecoration: "underline" }}>
                   აირჩიეთ ფაილი
                 </span>
