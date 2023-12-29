@@ -32,7 +32,7 @@ const Categories = ({ setCategoryId }) => {
               borderRadius: "40px",
               padding: "10px 20px",
               whiteSpace: "nowrap",
-              border: chosen === category.id ? "1px solid #000000" : "none",
+              border: chosen === category.id ? "2px solid #000000" : "none",
               cursor: "pointer",
             }}
             key={category.id}

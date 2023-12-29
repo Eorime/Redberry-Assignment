@@ -57,6 +57,7 @@ const Blogs = () => {
                 color: "#1a1a1f",
                 fontSize: "26px",
                 width: "544px",
+                height: "70px",
                 fontWeight: "500",
               }}
             >
@@ -93,6 +94,7 @@ const Blogs = () => {
                 fontSize: "21px",
                 width: "544px",
                 maxHeight: "56px",
+                marginTop: "2px",
                 lineHeight: "28px",
                 overflow: "hidden",
                 textOverflow: "ellipsis",

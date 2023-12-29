@@ -18,3 +18,15 @@
   width: 26px;
   top: 6px;
 }
+
+.blogs-categories {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 543px;
+  height: 80px;
+  white-space: nowrap;
+}
+
+.blogs-categories::-webkit-scrollbar {
+  display: none;
+}
