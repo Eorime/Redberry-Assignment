@@ -2,21 +2,14 @@ import "./blogs.css";
 import SeeMore from "./seemore.png";
 import { Link, useSearchParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import { useMemo } from "react";
+import useFilteredData from "../../hooks/useFilteredData";
 
 const Blogs = () => {
   const [data, error, isLoading] = useFetch(
     "https://api.blog.redberryinternship.ge/api/blogs"
   );
 
-  const [params] = useSearchParams();
-  const id = params.get("selectedId");
-
-  const filteredData = useMemo(() => {
-    return data.data?.filter((fdat) => {
-      return +id ? !!fdat.categories.find((cat) => cat.id === +id) : true;
-    });
-  }, [id, data.data]);
+  const [filteredData] = useFilteredData();
 
   return (
     <div className="blogs-window">

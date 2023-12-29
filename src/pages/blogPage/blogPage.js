@@ -4,6 +4,7 @@ import BackArrow from "./backArrow.png";
 import { Link, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { routes } from "../../constants/routes";
+import Slider from "../../components/Slider/Slider";
 
 const BlogPage = () => {
   let { id } = useParams();
@@ -65,6 +66,21 @@ const BlogPage = () => {
           <p className="blog-text">{data.description}</p>
         </div>
       )}
+      <h1
+        style={{
+          fontSize: "42px",
+          fontWeight: "bold",
+          marginTop: "750px",
+          marginBottom: "-400px",
+          marginLeft: "-1200px",
+          position: "relative",
+        }}
+      >
+        მსგავსი სტატიები
+      </h1>
+      <div className="slider">
+        <Slider />
+      </div>
     </div>
   );
 };

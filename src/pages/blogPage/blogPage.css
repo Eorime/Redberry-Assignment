@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .blog-header {
@@ -67,4 +68,15 @@
 
 .arrow-button:hover {
   cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  margin-top: 2900px;
+  margin-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar-track {
+  display: none;
 }
