@@ -5,7 +5,7 @@ import { useState } from "react";
 import InputIcon from "./upload.png";
 import { Link } from "react-router-dom";
 import { routes } from "../../constants/routes";
-import Form from "../../components/form/Form";
+import Form from "../../components/Form/Form";
 
 const Create = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -24,7 +24,14 @@ const Create = () => {
 
   return (
     <div className="full-container">
-      <img src={Logo} className="logo" alt="Redberry Logo" />
+      <div className="redberry-logo-middle">
+        <img
+          src={Logo}
+          className="logo"
+          alt="Redberry Logo"
+          style={{ marginTop: "37px" }}
+        />
+      </div>
       <Link className="arrow-Link" to={routes.Home}>
         <img
           src={BackArrow}
@@ -33,29 +40,47 @@ const Create = () => {
           style={{ position: "fixed" }}
         />
       </Link>
-      <h1 className="form-name">ბლოგის დამატება</h1>
-      <h1 className="custom-upload-text">ატვირთეთ ფოტო</h1>
-      <label htmlFor="image-input" className="custom-upload">
-        <span>
-          {!fileUploaded && (
-            <img className="input-icon" src={InputIcon} alt="Upload Icon" />
-          )}
-          {fileUploaded ? (
-            <span style={{ marginLeft: "10px" }}>{uploadedFile.name} </span>
-          ) : (
-            <>
-              ჩააგდეთ ფაილი აქ ან{" "}
-              <span style={{ textDecoration: "underline" }}>აირჩიეთ ფაილი</span>
-            </>
-          )}
-        </span>
-        <input
-          id="image-input"
-          type="file"
-          accept="image/*"
-          onChange={change}
-        />
-      </label>
+      <div className="form-custom">
+        <h1
+          className="form-name"
+          style={{
+            marginTop: "-310px",
+            marginLeft: "-100px",
+            position: "relative",
+          }}
+        >
+          ბლოგის დამატება
+        </h1>
+        <h1
+          className="custom-upload-text"
+          style={{ marginLeft: "410px", fontWeight: "500" }}
+        >
+          ატვირთეთ ფოტო
+        </h1>
+        <label htmlFor="image-input" className="custom-upload">
+          <span>
+            {!fileUploaded && (
+              <img className="input-icon" src={InputIcon} alt="Upload Icon" />
+            )}
+            {fileUploaded ? (
+              <span style={{ marginLeft: "10px" }}>{uploadedFile.name} </span>
+            ) : (
+              <>
+                ჩააგდეთ ფაილი აქ ან{" "}
+                <span style={{ textDecoration: "underline" }}>
+                  აირჩიეთ ფაილი
+                </span>
+              </>
+            )}
+          </span>
+          <input
+            id="image-input"
+            type="file"
+            accept="image/*"
+            onChange={change}
+          />
+        </label>
+      </div>
       <Form />
     </div>
   );

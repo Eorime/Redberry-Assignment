@@ -79,7 +79,7 @@ const BlogPage = () => {
         მსგავსი სტატიები
       </h1>
       <div className="slider">
-        <Slider />
+        <Slider categoryIds={data.categories?.map((item) => item.id)} />
       </div>
     </div>
   );

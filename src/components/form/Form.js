@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Form.css";
-import { useState } from "react";
 
 const Form = () => {
   const [inputValue, setInputValue] = useState({
@@ -24,40 +23,45 @@ const Form = () => {
 
   return (
     <div className="form">
-      <div className="author">
-        <label
-          htmlFor="username"
-          style={{ fontWeight: "500", color: "#1a1a1f" }}
-        >
-          ავტორი *
-        </label>
-        <input
-          onChange={handleChange}
-          id="author"
-          type="text"
-          name="author"
-          placeholder="შეიყვანეთ ავტორი"
-        ></input>
-        <ul className="author-validation">
-          <li>მინიმუმ 4 სიმბოლო</li>
-          <li>მინიმუმ ორი სიტყვა</li>
-          <li>მხოლოდ ქართული სიმბოლოები</li>
-        </ul>
-      </div>
-      <div className="title">
-        <label htmlFor="title" style={{ fontWeight: "500", color: "#1a1a1f" }}>
-          სათაური *
-        </label>
-        <input
-          onChange={handleChange}
-          id="title"
-          type="text"
-          name="title"
-          placeholder="შეიყვანეთ სათაური"
-        ></input>
-        <ul className="title-validation">
-          <li>მინიმუმ 4 სიმბოლო</li>
-        </ul>
+      <div className="row">
+        <div className="column author">
+          <label
+            htmlFor="author"
+            style={{ fontWeight: "500", color: "#1a1a1f" }}
+          >
+            ავტორი *
+          </label>
+          <input
+            onChange={handleChange}
+            id="author"
+            type="text"
+            name="author"
+            placeholder="შეიყვანეთ ავტორი"
+          />
+          <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
+            <li>მინიმუმ 4 სიმბოლო</li>
+            <li>მინიმუმ ორი სიტყვა</li>
+            <li>მხოლოდ ქართული სიმბოლოები</li>
+          </ul>
+        </div>
+        <div className="column title">
+          <label
+            htmlFor="title"
+            style={{ fontWeight: "500", color: "#1a1a1f" }}
+          >
+            სათაური *
+          </label>
+          <input
+            onChange={handleChange}
+            id="title"
+            type="text"
+            name="title"
+            placeholder="შეიყვანეთ სათაური"
+          />
+          <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
+            <li>მინიმუმ 4 სიმბოლო</li>
+          </ul>
+        </div>
       </div>
       <div className="description">
         <label
@@ -66,40 +70,42 @@ const Form = () => {
         >
           აღწერა *
         </label>
-        <input
+        <textarea
           onChange={handleChange}
           id="description"
           type="text"
           name="description"
           placeholder="შეიყვანეთ აღწერა"
-        ></input>
+        />
+        <ul style={{ color: "#85858D", width: "240px", marginTop: "-5px" }}>
+          <li>მინიმუმ 4 სიმბოლო</li>
+        </ul>
       </div>
-      <div className="date">
-        <label htmlFor="date" style={{ fontWeight: "500", color: "#1a1a1f" }}>
-          გამოქვეყნების თარიღი *
-        </label>
-        <input
-          onChange={handleChange}
-          id="date"
-          type="date"
-          name="date"
-        ></input>
+
+      <div className="row">
+        <div className="column date">
+          <label htmlFor="date" style={{ fontWeight: "500", color: "#1a1a1f" }}>
+            გამოქვეყნების თარიღი *
+          </label>
+          <input onChange={handleChange} id="date" type="date" name="date" />
+        </div>
+        <div className="column category">
+          <label
+            htmlFor="category"
+            style={{ fontWeight: "500", color: "#1a1a1f" }}
+          >
+            კატეგორია
+          </label>
+          <input
+            onChange={handleChange}
+            id="category"
+            type="text"
+            name="category"
+            placeholder="აირჩიეთ კატეგორია"
+          />
+        </div>
       </div>
-      <div className="category">
-        <label
-          htmlFor="category"
-          style={{ fontWeight: "500", color: "#1a1a1f" }}
-        >
-          კატეგორია
-        </label>
-        <input
-          onChange={handleChange}
-          id="category"
-          type="text"
-          name="category"
-          placeholder="აირჩიეთ კატეგორია"
-        ></input>
-      </div>
+
       <div className="email">
         <label htmlFor="email" style={{ fontWeight: "500", color: "#1a1a1f" }}>
           ელ-ფოსტა
@@ -110,11 +116,11 @@ const Form = () => {
           type="email"
           name="email"
           placeholder="Example@redberry.ge"
-        ></input>
+        />
       </div>
-      {/* <button className="publish" onClick={handleSubmit}>
+      <button className="publish" onClick={handleSubmit}>
         გამოქვეყნება
-      </button> */}
+      </button>
     </div>
   );
 };

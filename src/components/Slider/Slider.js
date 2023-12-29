@@ -5,8 +5,8 @@ import useFilteredData from "../../hooks/useFilteredData";
 import BackArrow from "./slider_arrow.png";
 import SeeMore from "./seemore.png";
 
-const Slider = () => {
-  const [filteredData] = useFilteredData();
+const Slider = ({ categoryIds }) => {
+  const [filteredData] = useFilteredData(categoryIds);
   const slide = useRef(null);
 
   const handleLeftClick = () => {
